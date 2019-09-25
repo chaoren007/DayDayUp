@@ -18,6 +18,8 @@
         <module>zcORM</module>
         <module>zcMVC</module>
         <module>zcBoot</module>
+        <module>zcSpringMVC</module>
+        <module>zcHystrix</module>
     </modules>
 
     <properties>
