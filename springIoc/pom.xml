@@ -7,9 +7,10 @@
         <groupId>com.zc</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
+    <modelVersion>4.0.0</modelVersion>
     <artifactId>springIoc</artifactId>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -17,10 +18,16 @@
     </properties>
 
     <dependencies>
+        <!--Spring核心依赖  ioc 90%以上-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>5.0.9.RELEASE</version>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.apache.commons</groupId>-->
+            <!--<artifactId></artifactId>-->
+            <!--<version></version>-->
+        <!--</dependency>-->
     </dependencies>
 </project>

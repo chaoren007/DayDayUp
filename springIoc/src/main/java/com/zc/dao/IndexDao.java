@@ -6,5 +6,5 @@ package com.zc.dao;
  * @Date 2019/9/28 16:01
  **/
 public interface IndexDao {
-    void test();
+    public void test();
 }
