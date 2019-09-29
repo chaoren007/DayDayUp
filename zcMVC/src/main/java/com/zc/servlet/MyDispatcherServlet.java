@@ -1,14 +1,14 @@
-package servlet;
+package com.zc.servlet;
 /**
  * @Description TODO
  * @Author LiquorSea
  * @Date 2019/9/8 21:10
  **/
 
-import annotation.MyAutowired;
-import annotation.MyController;
-import annotation.MyRequestMapping;
-import annotation.MyService;
+import com.zc.annotation.MyAutowired;
+import com.zc.annotation.MyController;
+import com.zc.annotation.MyRequestMapping;
+import com.zc.annotation.MyService;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;

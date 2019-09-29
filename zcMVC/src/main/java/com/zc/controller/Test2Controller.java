@@ -1,8 +1,8 @@
-package controller;
+package com.zc.controller;
 
-import annotation.MyController;
-import annotation.MyRequestMapping;
-import annotation.MyRequestParam;
+import com.zc.annotation.MyController;
+import com.zc.annotation.MyRequestMapping;
+import com.zc.annotation.MyRequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

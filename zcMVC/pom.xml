@@ -11,6 +11,13 @@
 
     <artifactId>zcMVC</artifactId>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>1.8</java.version>
+    </properties>
+    <!-- scope : compile / runtime / test / provided / system / import -->
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -18,10 +25,10 @@
             <version>3.0.1</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-autoconfigure</artifactId>
-            <version>1.5.14.RELEASE</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-autoconfigure</artifactId>-->
+<!--            <version>1.5.14.RELEASE</version>-->
+<!--        </dependency>-->
     </dependencies>
 </project>

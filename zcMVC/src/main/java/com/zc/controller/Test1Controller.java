@@ -1,10 +1,10 @@
-package controller;
+package com.zc.controller;
 
-import annotation.MyAutowired;
-import annotation.MyController;
-import annotation.MyRequestMapping;
-import annotation.MyRequestParam;
-import service.TestService;
+import com.zc.annotation.MyAutowired;
+import com.zc.annotation.MyController;
+import com.zc.annotation.MyRequestMapping;
+import com.zc.annotation.MyRequestParam;
+import com.zc.service.TestService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
