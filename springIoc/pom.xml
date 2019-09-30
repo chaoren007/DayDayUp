@@ -11,12 +11,6 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>springIoc</artifactId>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
-
     <dependencies>
         <!--Spring核心依赖  ioc 90%以上-->
         <dependency>
@@ -24,10 +18,5 @@
             <artifactId>spring-context</artifactId>
             <version>5.0.9.RELEASE</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.apache.commons</groupId>-->
-            <!--<artifactId></artifactId>-->
-            <!--<version></version>-->
-        <!--</dependency>-->
     </dependencies>
 </project>
