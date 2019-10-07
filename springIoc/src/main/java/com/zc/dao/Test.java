@@ -1,5 +1,6 @@
 package com.zc.dao;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -9,8 +10,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  **/
 public class Test {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("classpath:spring.xml");
-        IndexService service = (IndexService)classPathXmlApplicationContext.getBean("service");
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(Spring.class);
+        IndexService service = (IndexService)applicationContext.getBean("indexService");
         service.service();
     }
 }

@@ -1,7 +1,5 @@
 package com.zc.dao;
 
-import org.springframework.stereotype.Component;
-
 /**
  * @Description TODO
  * @Author LiquorSea
@@ -9,9 +7,9 @@ import org.springframework.stereotype.Component;
  **/
 
 //@Component(value = "dao")
-public class IndexDaoImpl implements IndexDao {
+public class IndexDaoImpl_ implements IndexDao {
     @Override
     public void test(){
-        System.out.println("===impl0===");
+        System.out.println("===impl1===");
     }
 }
