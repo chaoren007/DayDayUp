@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://code.alibabatech.com/schema/dubbo  
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <dubbo:consumer timeout="300000"/>
+
+
+    <!-- 品牌和分类和单位 -->
+    <dubbo:reference interface="com.zc.api.BrandFacade"
+                     id="brandFacade" group="zc" version="zc"
+                     timeout="30000" check="false"></dubbo:reference>
+</beans>

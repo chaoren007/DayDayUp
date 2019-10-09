@@ -22,12 +22,5 @@ public class SingleParent {
         return INSTANCE_MAP.get(instanceClass);
     }
 }
-
-class Test{}
-//    public static void main(String[] args) throws InstantiationException, IllegalAccessException {
-//        SingleParent.getInstance(Test.class);
-//    }
-//}
-  
   
    

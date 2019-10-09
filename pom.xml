@@ -24,6 +24,8 @@
         <module>zcMybatis</module>
         <module>springIoc</module>
         <module>aop</module>
+        <module>zcBootApi</module>
+        <module>zcBootService</module>
     </modules>
 
     <properties>

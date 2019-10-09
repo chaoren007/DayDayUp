@@ -13,8 +13,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @ComponentScan(value = "com.zc")
 @EnableAspectJAutoProxy(proxyTargetClass = false)
 public class AppConfig {
-
-
 }
   
   

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
  * @Date 2019/10/7 18:54
  **/
 @Repository
-public class IndexDaoImpl implements IndexDao {
+public final class IndexDaoImpl implements IndexDao {
 
     @zc
     @Override

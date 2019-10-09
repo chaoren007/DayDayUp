@@ -14,11 +14,9 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class ZcAspectJ {
-
     /**
      *   切入点
      */
-
     @Pointcut("execution(* com.zc.dao.*.*(Integer,..))")
     public void pointCutExecution(){
 
@@ -49,7 +47,7 @@ public class ZcAspectJ {
 
     }
 
-    @Before("pointCutTarget()")
+    @Before("pointCutAnnotation()")
     public void before(){
         System.out.println("before");
     }
