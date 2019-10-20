@@ -26,6 +26,7 @@
         <module>aop</module>
         <module>zcBootApi</module>
         <module>zcBootService</module>
+        <module>MVC</module>
     </modules>
 
     <properties>
