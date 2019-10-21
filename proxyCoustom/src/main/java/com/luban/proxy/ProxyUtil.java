@@ -17,9 +17,6 @@ public class ProxyUtil {
      *  content --->string
      *  .java  io
      * .class
-     *
-     *
-     *
      * .new   反射----》class
      * @return
      */
@@ -69,7 +66,7 @@ public class ProxyUtil {
 
         content=packageContent+importContent+clazzFirstLineContent+filedContent+constructorContent+methodContent+"}";
 
-        File file =new File("d:\\com\\google\\$Proxy.java");
+        File file =new File("e:\\com\\google\\$Proxy.java");
         try {
             if (!file.exists()) {
                 file.createNewFile();
@@ -82,15 +79,13 @@ public class ProxyUtil {
 
 
             JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
-
             StandardJavaFileManager fileMgr = compiler.getStandardFileManager(null, null, null);
             Iterable units = fileMgr.getJavaFileObjects(file);
-
             JavaCompiler.CompilationTask t = compiler.getTask(null, fileMgr, null, null, null, units);
             t.call();
             fileMgr.close();
 
-            URL[] urls = new URL[]{new URL("file:D:\\\\")};
+            URL[] urls = new URL[]{new URL("file:e:\\\\")};
             URLClassLoader urlClassLoader = new URLClassLoader(urls);
             Class clazz = urlClassLoader.loadClass("com.google.$Proxy");
 
@@ -102,10 +97,6 @@ public class ProxyUtil {
         }catch (Exception e){
             e.printStackTrace();
         }
-
-
-
-
 
         /**
          * public UserDaoLog(UserDao target){

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zc.dao.TestDao" >
+    <resultMap id="CrmContactsMap" type="CrmContacts" >
+        
+        <result column="contacts_id" property="contactsId" jdbcType="BIGINT" />
+        
+        <result column="customer_id" property="customerId" jdbcType="BIGINT" />
+        
+        <result column="customer_code" property="customerCode" jdbcType="VARCHAR" />
+        
+        <result column="contacts_type" property="contactsType" jdbcType="TINYINT" />
+        
+        <result column="contacts_name" property="contactsName" jdbcType="VARCHAR" />
+        
+        <result column="contacts_position_status" property="contactsPositionStatus" jdbcType="TINYINT" />
+        
+        <result column="contacts_source" property="contactsSource" jdbcType="VARCHAR" />
+        
+        <result column="contacts_mobile" property="contactsMobile" jdbcType="VARCHAR" />
+        
+        <result column="contacts_email" property="contactsEmail" jdbcType="VARCHAR" />
+        
+        <result column="contacts_qq" property="contactsQq" jdbcType="VARCHAR" />
+        
+        <result column="contacts_wechat" property="contactsWechat" jdbcType="VARCHAR" />
+        
+        <result column="contacts_phone" property="contactsPhone" jdbcType="VARCHAR" />
+        
+        <result column="contacts_position" property="contactsPosition" jdbcType="VARCHAR" />
+        
+        <result column="contacts_birthday" property="contactsBirthday" jdbcType="DATE" />
+        
+        <result column="contacts_hobby" property="contactsHobby" jdbcType="VARCHAR" />
+        
+        <result column="remark" property="remark" jdbcType="VARCHAR" />
+        
+        <result column="flow_status" property="flowStatus" jdbcType="TINYINT" />
+        
+        <result column="receive_status" property="receiveStatus" jdbcType="TINYINT" />
+        
+        <result column="registration_time" property="registrationTime" jdbcType="TIMESTAMP" />
+
+        <result column="company_full_name" property="companyFullName" jdbcType="VARCHAR" />
+
+        <result column="follow_user_employee_id" property="followUserEmployeeId" jdbcType="BIGINT" />
+        
+        <result column="follow_user_id" property="followUserId" jdbcType="INTEGER" />
+        
+        <result column="follow_user_name" property="followUserName" jdbcType="VARCHAR" />
+        
+        <result column="follow_user_dept_id" property="followUserDeptId" jdbcType="INTEGER" />
+        
+        <result column="follow_user_dept_name" property="followUserDeptName" jdbcType="VARCHAR" />
+        
+        <result column="create_employee_id" property="createEmployeeId" jdbcType="BIGINT" />
+        
+        <result column="create_user_id" property="createUserId" jdbcType="INTEGER" />
+        
+        <result column="create_user_name" property="createUserName" jdbcType="VARCHAR" />
+        
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        
+        <result column="update_employee_id" property="updateEmployeeId" jdbcType="BIGINT" />
+        
+        <result column="update_user_id" property="updateUserId" jdbcType="INTEGER" />
+        
+        <result column="update_user_name" property="updateUserName" jdbcType="VARCHAR" />
+        
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+
+        <result column="data_source" property="dataSource" jdbcType="TINYINT" />
+
+        <result column="register_flag" property="registerFlag" jdbcType="TINYINT" />
+
+        <result column="place_order_flag" property="placeOrderFlag" jdbcType="TINYINT" />
+
+        <result column="last_order_time" property="lastOrderTime" jdbcType="TIMESTAMP" />
+
+        <result column="registration_user_id" property="registrationUserId" jdbcType="INTEGER" />
+
+        <result column="flow_type" property="flowType" jdbcType="TINYINT" />
+
+        <result column="mnemonic_code" property="mnemonicCode" jdbcType="VARCHAR" />
+
+        <result column="flow_dept_id" property="flowDeptId" jdbcType="INTEGER" />
+
+        <result column="contacts_position_remarks" property="contactsPositionRemarks" jdbcType="VARCHAR"/>
+
+        <result column="contacts_dept" property="contactsDept" jdbcType="VARCHAR"/>
+    </resultMap>
+    
+    <sql id="Base_Column_List" >
+        contacts_id,
+        customer_id,
+        customer_code,
+        contacts_type,
+        contacts_name,
+        contacts_position_status,
+        contacts_source,
+        contacts_mobile,
+        contacts_email,
+        contacts_qq,
+        contacts_wechat,
+        contacts_phone,
+        contacts_position,
+        contacts_birthday,
+        contacts_hobby,
+        remark,
+        flow_status,
+        receive_status,
+        registration_time,
+        follow_user_employee_id,
+        follow_user_id,
+        follow_user_name,
+        follow_user_dept_id,
+        follow_user_dept_name,
+        create_employee_id,
+        create_user_id,
+        create_user_name,
+        create_time,
+        update_employee_id,
+        update_user_id,
+        update_user_name,
+        update_time,
+        data_source,
+        register_flag,
+        place_order_flag,
+        last_order_time,
+        registration_user_id,
+        flow_dept_id,
+        contacts_position_remarks,
+        contacts_dept
+    </sql>
+
+    <select id="getFollowUserList" resultMap="CrmContactsMap" parameterType="CrmContacts" >
+        select <include refid="Base_Column_List" />
+        from t_crm_contacts
+        where
+            follow_user_name is not null
+            and follow_user_name !=''
+        <if test="followUserName != null and followUserName != ''">
+            and follow_user_name like CONCAT('%',#{followUserName,jdbcType=VARCHAR},'%')
+        </if>
+        GROUP BY follow_user_id
+    </select>
+</mapper>

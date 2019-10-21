@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<property name="log.base" value="/data/logs" /> <!-- 日志根目录 -->
+	<property name="log.moduleName" value="${appName}" /> <!-- 模块名称， 影响日志配置名，日志文件名 -->
+
+	<!--控制台输出 -->
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern><![CDATA[%date{yyyy-MM-dd HH:mm:ss.SSS} %-5level[%.6thread]%logger{6}.%method<%L> %X{requestId} %X{class} %X{method} %msg%n]]></Pattern>
+		</encoder>
+	</appender>
+
+	<!-- com.zc中都输出debug -->
+<!--	<logger name="com.zc" level="INFO" additivity="false">-->
+<!--		<appender-ref ref="stdout" />-->
+<!--	</logger>-->
+
+	<root level="INFO">
+		<appender-ref ref="stdout" />
+	</root>
+
+</configuration>

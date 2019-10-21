@@ -6,8 +6,8 @@
         http://code.alibabatech.com/schema/dubbo  
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <dubbo:provider delay="-1" timeout="6000" retries="0"/>
+<!--    <dubbo:provider delay="-1" timeout="6000" retries="0"/>-->
     <!-- 要暴露的服务接口 -->
     <dubbo:service interface="com.zc.api.BrandFacade"
-                   ref="brandFacadeImpl" group="group" version="version"/>
+                   ref="brandFacadeImpl" group="zc" version="zc"/>
 </beans>

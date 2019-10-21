@@ -26,6 +26,9 @@
         <module>aop</module>
         <module>zcBootApi</module>
         <module>zcBootService</module>
+        <module>threadLocalTest</module>
+        <module>dao</module>
+        <module>spring-dao</module>
         <module>MVC</module>
     </modules>
 

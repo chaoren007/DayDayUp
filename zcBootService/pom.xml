@@ -13,16 +13,26 @@
 
 
     <dependencies>
+
+        <!--项目的API-->
         <dependency>
             <groupId>com.zc.api</groupId>
             <artifactId>zcBootApi</artifactId>
             <version>4.0.4-SNAPSHOT</version>
         </dependency>
 
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-            </dependency>
+        <!--SpringBootWeb-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--dubbo相关-->
+        <dependency>
+            <groupId>com.zc.starter</groupId>
+            <artifactId>spring-boot-starter-dubbo</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>
