@@ -30,6 +30,7 @@
         <module>dao</module>
         <module>spring-dao</module>
         <module>MVC</module>
+        <module>jdkSource</module>
     </modules>
 
     <properties>

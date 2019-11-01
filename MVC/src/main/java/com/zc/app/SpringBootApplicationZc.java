@@ -20,9 +20,7 @@ public class SpringBootApplicationZc {
     public static void run() throws LifecycleException, ServletException, InterruptedException {
         Tomcat tomcat = new Tomcat();
         tomcat.setPort(9080);
-
         String sourcePath = SpringBootApplicationZc.class.getResource("/").getPath();
-
         //告诉tomcat你的源码在哪里
         System.out.println(new File("MVC/src/main/webapp").getAbsolutePath());
         Context context = tomcat.addWebapp("/", new File("MVC/src/main/webapp").getAbsolutePath());
