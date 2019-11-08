@@ -31,6 +31,7 @@
         <module>spring-dao</module>
         <module>MVC</module>
         <module>jdkSource</module>
+        <module>zcSocket</module>
     </modules>
 
     <properties>
