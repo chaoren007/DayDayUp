@@ -18,14 +18,7 @@ public interface ICrmContactsDao {
    * @return 返回CrmContacts
    * @throws Exception
    */
-   public CrmContacts getCrmContactsById(Long contactsId) throws Exception;
+   public CrmContacts getCrmContactsById() throws Exception;
 
-   /**
-    * 根据条件查询CrmContacts列表
-    * @param crmContacts
-    * @return 返回CrmContacts列表
-    * @throws Exception
-    */
-   public List<CrmContacts> getAll(CrmContacts crmContacts) throws Exception;
 }
 

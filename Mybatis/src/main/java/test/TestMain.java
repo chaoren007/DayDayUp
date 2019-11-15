@@ -27,7 +27,7 @@ public class TestMain {
         SqlSession session = factory.openSession();
 
         ICrmContactsDao contactsDao = session.getMapper(ICrmContactsDao.class);
-        CrmContacts contacts = contactsDao.getCrmContactsById(7L);
+        CrmContacts contacts = contactsDao.getCrmContactsById();
         System.out.println("******* " + contacts.toString());
     }
 }

@@ -16,7 +16,8 @@ public class SpringApplicationLuban {
         tomcat.setPort(9080);
         String sourcePath = SpringApplicationLuban.class.getResource("/").getPath();
         //告訴tomcat你的源碼在哪裏
-        Context ctx = tomcat.addWebapp("/",new File("zcSpringMVC/src/main/webapp").getAbsolutePath());
+        String absolutePath = new File("zcSpringMVC/src/main/webapp").getAbsolutePath();
+        Context ctx = tomcat.addWebapp("/", absolutePath);
         WebResourceRoot resources = new StandardRoot(ctx);
         resources.addPreResources(new DirResourceSet(resources, "/WEB-INF/classes",
                 sourcePath, "/"));

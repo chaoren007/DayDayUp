@@ -3,15 +3,10 @@
 <mapper namespace="test.dao.ICrmContactsDao" >
 
 
-    <select id="getCrmContactsById" resultMap="CrmContactsMap" parameterType="java.lang.Long" >
+    <select id="getCrmContactsById" resultMap="test.bean.CrmContacts" parameterType="java.lang.Long" >
         select *
-          from t_crm_contacts
-         where contacts_id = #{contactsId,jdbcType=BIGINT}
-    </select>
-    
-    <select id="getAll"  resultMap="CrmContactsMap" parameterType="test.bean.CrmContacts">
-        select <include refid="Base_Column_List" /> from t_crm_contacts where 1=1
-        <include refid="normalWhere" />
+        from t_crm_contacts
+        where contacts_id = #{contactsId,jdbcType=BIGINT}
     </select>
 
 </mapper>
