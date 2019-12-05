@@ -27,12 +27,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--dubbo相关-->
-        <dependency>
-            <groupId>com.zc.starter</groupId>
-            <artifactId>spring-boot-starter-dubbo</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
 </project>
