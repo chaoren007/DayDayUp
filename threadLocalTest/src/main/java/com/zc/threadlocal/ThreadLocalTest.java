@@ -13,7 +13,7 @@ public class ThreadLocalTest {
             return linkedList;
         }
     };
-//    private static final ThreadLocal<List<String>> threadLocal = new NoName();
+//    private static final ThreadLocal<list<String>> threadLocal = new NoName();
 
 //    ArrayList<String> list = new ArrayList<String>(){
 //        @Override
@@ -43,7 +43,7 @@ public class ThreadLocalTest {
 //        Thread t1 = new Thread(new Runnable() {
 //            @Override
 //            public void run() {
-//                List<String> strs = new ArrayList<>();
+//                list<String> strs = new ArrayList<>();
 //                strs.add("1");
 //                strs.add("2");
 //                strs.add("3");
@@ -59,7 +59,7 @@ public class ThreadLocalTest {
 //                } catch (InterruptedException e) {
 //                    e.printStackTrace();
 //                }
-//                List<String> strs = new ArrayList<>();
+//                list<String> strs = new ArrayList<>();
 //                strs.add("a");
 //                strs.add("b");
 //                t.setThreadLocalValue(strs);

@@ -32,6 +32,8 @@
         <module>MVC</module>
         <module>jdkSource</module>
         <module>zcSocket</module>
+        <module>dubbo-producer</module>
+        <module>dubbo-producer-api</module>
     </modules>
 
     <properties>
