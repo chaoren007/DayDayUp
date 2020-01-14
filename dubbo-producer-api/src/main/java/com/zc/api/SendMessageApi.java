@@ -1,7 +1,10 @@
 package com.zc.api;
 
+
+import java.util.concurrent.CompletableFuture;
+
 public interface SendMessageApi {
 
-    public Message sendMessage(Message message);
+    public CompletableFuture<Message> sendMessage(Message message);
 
 }

@@ -1,6 +1,8 @@
 package com.zc.api;
 
-public class Message {
+import java.io.Serializable;
+
+public class Message implements Serializable {
 
     private String id;
     private String message;
