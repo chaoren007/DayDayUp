@@ -12,7 +12,7 @@ public class BrandFacadeImpl implements BrandFacade {
 
 	@Override
 	public List<BrandDTO> queryList(BrandDTO brandQueryDTO) {
-		List<BrandDTO> brandToList = new ArrayList<>();
+		List<BrandDTO> brandToList = new ArrayList<BrandDTO>();
 		BrandDTO dto = new BrandDTO();
 		dto.setId(1L);
 		dto.setBrandName("品牌名称");

@@ -10,5 +10,5 @@
                     file="E://output/dubbo_consumer.cache" />
     <dubbo:consumer check="false" timeout="100000" />
     <!-- ***************************************提供给外部的接口*************************************** -->
-    <dubbo:reference id="sendMessageApi" interface="com.zc.api.SendMessageApi"  registry="zookeeper" owner="sea" version="1.0.0"/>
+    <dubbo:reference id="sendMessageApi" timeout="10000" interface="com.zc.api.SendMessageApi"  registry="zookeeper" owner="sea" version="1.0.0"/>
 </beans>
