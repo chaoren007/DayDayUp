@@ -1,4 +1,6 @@
 import java.lang.ref.SoftReference;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 
 /**
  * 软引用何时被收集
@@ -9,6 +11,7 @@ import java.lang.ref.SoftReference;
 public class SoftReferenceDemo {
 
     public static void main(String[] args) throws InterruptedException {
+        BlockingQueue queue = new ArrayBlockingQueue(16);
         //100M的缓存数据
         byte[] cacheData = new byte[100 * 1024 * 1024];
         //将缓存数据用软引用持有
