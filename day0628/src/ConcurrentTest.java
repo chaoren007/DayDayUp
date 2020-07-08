@@ -1,4 +1,3 @@
-import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -9,13 +8,12 @@ public class ConcurrentTest {
     static  int MIN = 0x00000000;
     public static void main(String[] args) {
         // PhantomReference p = new PhantomReference();
-
-        test();
+        // test();
         ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap<>(32);
+        concurrentHashMap.put(1,"99");
         final int cpuNum = Runtime.getRuntime().availableProcessors();
         System.out.println(cpuNum);
-
-        HashMap hashMap = new HashMap(32);
+        // HashMap hashMap = new HashMap(32);
         ConcurrentTest test = new ConcurrentTest();
         ConcurrentTest.spread(test.hashCode());
     }
