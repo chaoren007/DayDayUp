@@ -11,7 +11,6 @@ public class Main {
         // spring环境
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:remote-consumer.xml");
         // String[] beanDefinitionNames = context.getBeanDefinitionNames();
-
         // 获取bean
         Message message = new Message();
         message.setId(Integer.toBinaryString(998));
