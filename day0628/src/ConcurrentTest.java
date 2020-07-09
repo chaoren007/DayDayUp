@@ -7,6 +7,8 @@ public class ConcurrentTest {
     static final int HASH_BITS = 0x7fffffff;
     static  int MIN = 0x00000000;
     public static void main(String[] args) {
+        System.out.println(1<<30);
+        System.out.println(1 << 30);
         // PhantomReference p = new PhantomReference();
         // test();
         ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap<>(32);
@@ -25,7 +27,6 @@ public class ConcurrentTest {
         System.out.println(HASH_BITS);
         return (h ^ (h >>> 16)) & HASH_BITS;
     }
-
     private static void test() {
         System.out.println(++MIN);
         test();

@@ -1,24 +1,43 @@
-import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
-
 /**
  * @author Sea
  */
 public class Main {
-    private static final int THREAD = 1 << 4;
+    private static final int THREAD = 1 << 10;
     public static void main(String[] args) throws InterruptedException {
-        ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap<>(32);
-        for(int i = 0; i< THREAD; i++) {
-           new Thread(new Runnable() {
-               @Override
-               public void run() {
-                   concurrentHashMap.put(Thread.currentThread(), Thread.currentThread());
-               }
-           }).start();
-        }
-        Thread.sleep(1000);
-        for (Object obj : concurrentHashMap.keySet()) {
-            System.out.println(concurrentHashMap.get(obj));
+        final Stu stu = new Stu(100);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for(int i = 0; i< THREAD; i++) {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            System.out.println(stu.score);
+                            stu.score = 77;
+                        }
+                    }).start();
+                }
+            }
+        }).start();
+
+        while (true) {
+            Thread.sleep(2000);
+            System.out.println("===" + stu.score);
+            stu.score = 88;
         }
     }
+
+}
+
+class Stu{
+    public int score = 99;
+    public Stu(int score) {
+        this.score = score;
+    }
+
 }
