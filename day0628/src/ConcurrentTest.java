@@ -10,7 +10,7 @@ public class ConcurrentTest {
         System.out.println(1<<30);
         System.out.println(1 << 30);
         // PhantomReference p = new PhantomReference();
-        // test();
+        test();
         ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap<>(32);
         concurrentHashMap.put(1,"99");
         final int cpuNum = Runtime.getRuntime().availableProcessors();
