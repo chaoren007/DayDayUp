@@ -9,7 +9,7 @@ import java.util.Map;
  * @Date 2019/9/22 17:50
  **/
 public class SingleParent {
-    private static Map<Class<? extends SingleParent>, SingleParent> INSTANCE_MAP = new HashMap<>();
+    private static Map<Class<? extends SingleParent>, SingleParent> INSTANCE_MAP = new HashMap(16);
 
     private SingleParent() {
     }
