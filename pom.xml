@@ -35,6 +35,7 @@
         <module>dubbo-producer</module>
         <module>dubbo-producer-api</module>
         <module>dubbo-consumer</module>
+        <module>myJedis</module>
     </modules>
 
     <properties>
