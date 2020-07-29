@@ -4,6 +4,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 
+/**
+ * @author Sea
+ */
 public class Main {
     public static void main(String[] args) {
 
@@ -13,8 +16,6 @@ public class Main {
         for (String beanDefinitionName : beanDefinitionNames) {
             System.out.println(beanDefinitionName);
         }
-//        System.out.println(RpcContext.getContext().isConsumerSide());
-//        RpcContext.getContext().setAttachment("uuid", UUID.randomUUID().toString());
         try {
             System.in.read();
         } catch (IOException e) {

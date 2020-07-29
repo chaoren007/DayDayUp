@@ -12,12 +12,13 @@ public class Main {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:remote-consumer.xml");
         Message message = new Message();
         message.setId(Integer.toBinaryString(998));
-        message.setMessage("hello word ");
+        message.setMessage("来自消费端的 hello word ");
+
+
+
         SendMessageApi bean = context.getBean(SendMessageApi.class);
-        // 调用直接返回CompletableFuture
-        RpcContext context1 = RpcContext.getContext();
-        RpcContext context3 = RpcContext.getContext();
-        // 早于结果输出
-        System.out.println("Executed before response return.");
+        bean.sendMessage(message);
+//        // 早于结果输出
+//        System.out.println("Executed before response return.");
     }
 }
