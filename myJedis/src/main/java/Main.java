@@ -1,30 +1,52 @@
 import redis.clients.jedis.Jedis;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.util.*;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 
 /**
  * @author Administrator
  */
 public class Main {
+    private static Jedis jedis;
+    static {
+        jedis = new Jedis("10.31.205.143",6379);
+        jedis.auth("local-fuck-888");
+    }
+
 
     public static void main(String[] args) throws Exception{
-        doSomeTh1();
+        doSomeTh3();
+    }
+
+    private static void doSomeTh3() throws Exception{
+        int size = 0;
+        String s = jedis.get("Basic:JSW:KEYS:2");
+        String preFix = "{\"MaterialCodes\":";
+        String endFix = "}";
+        String param = preFix + s + endFix;
+        System.out.println(param);
+
+    }
+
+    private static void doSomeTh2() throws Exception{
+        int size = 0;
+        for (int i=0; i < 8; i++) {
+            String s = jedis.get("Basic:JSW:KEYS:" + i);
+            ArrayList arrayList = JsonUtil.fromJson(s, ArrayList.class);
+            if (arrayList.contains("RRHS0201WMF1000TEE")) {
+                System.out.println(i);
+                break;
+            }
+            size = size + arrayList.size();
+            System.out.println(size);
+
+        }
     }
 
 
 
     private static void doSomeTh1() throws Exception{
         //连接本地的 Redis 服务
-        Jedis jedis = new Jedis("10.31.205.143",6379);
-        jedis.auth("local-fuck-888");
         Set<String> keys = jedis.keys("Basic:JSW:CODE:*");
         KingSourceWarePojo param = new KingSourceWarePojo();
         List<KingSourceWare> data = new ArrayList<>();
@@ -32,10 +54,10 @@ public class Main {
         int count = 0;
         Set<String> brandIdSet = new HashSet<>();
         for (String key : keys) {
-            count = count + 1;
-            if (count > 200) {
-                break;
-            }
+//            count = count + 1;
+//            if (count > 200) {
+//                break;
+//            }
 
             String k = key.split(":")[3];
             KingSourceWare kingSourceWare = new KingSourceWare();
