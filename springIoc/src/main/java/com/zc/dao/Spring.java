@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ImportResource;
  **/
 @Configurable
 @ComponentScan(value = "com.zc")
-@ImportResource(value = "classpath:spring.xml")
+//@ImportResource(value = "classpath:spring.xml")
 public class Spring {
 }
   

@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:p="http://www.springframework.org/schema/p"
-       xmlns:c="http://www.springframework.org/schema/c"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-                           http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd"
-        default-autowire="byType">
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+       <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+       <!--xmlns:p="http://www.springframework.org/schema/p"-->
+       <!--xmlns:c="http://www.springframework.org/schema/c"-->
+       <!--xmlns:context="http://www.springframework.org/schema/context"-->
+       <!--xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd-->
+                           <!--http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd"-->
+        <!--&lt;!&ndash;default-autowire="byType">&ndash;&gt;-->
 
 
-    <bean id="dao" class="com.zc.dao.IndexDaoImpl"></bean>
-    <bean id="dao1" class="com.zc.dao.IndexDaoImpl_"></bean>
-    <bean id="indexService" class="com.zc.dao.IndexService"></bean>
+    <!--&lt;!&ndash;<bean id="dao" class="com.zc.dao.IndexDaoImpl"></bean>&ndash;&gt;-->
+    <!--&lt;!&ndash;<bean id="dao1" class="com.zc.dao.IndexDaoImpl_"></bean>&ndash;&gt;-->
+    <!--&lt;!&ndash;<bean id="indexService" class="com.zc.dao.IndexServiceB"></bean>&ndash;&gt;-->
 
 
-    <!--<context:component-scan base-package="com.zc"/>-->
-    <!--<bean id="service" class="com.zc.dao.IndexService">-->
-        <!--&lt;!&ndash;set方法注入&ndash;&gt;-->
-        <!--<property name="dao" ref="dao"></property>-->
-        <!--&lt;!&ndash;构造方法注入&ndash;&gt;-->
-        <!--&lt;!&ndash;<constructor-arg ref="dao"></constructor-arg>&ndash;&gt;-->
-    <!--</bean>-->
-</beans>
+    <!--&lt;!&ndash;<context:component-scan base-package="com.zc"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<bean id="service" class="com.zc.dao.IndexService">&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;set方法注入&ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="dao" ref="dao"></property>&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;构造方法注入&ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;<constructor-arg ref="dao"></constructor-arg>&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;</bean>&ndash;&gt;-->
+<!--</beans>-->

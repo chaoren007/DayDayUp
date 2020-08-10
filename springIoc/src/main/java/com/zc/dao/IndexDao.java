@@ -1,10 +1,20 @@
 package com.zc.dao;
 
+import org.springframework.stereotype.Service;
+
 /**
- * @Description TODO
  * @Author LiquorSea
- * @Date 2019/9/28 16:01
+ * @Date 2019/9/28 16:03
  **/
-public interface IndexDao {
-    public void test();
+
+@Service
+public class IndexDao {
+
+    public String query() {
+        return "this is a query result";
+    }
+
 }
+  
+  
+   

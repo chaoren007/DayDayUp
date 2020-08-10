@@ -9,10 +9,8 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args) {
-
         // 初始化Spring容器
-        String[] configLocations = {"classpath:remote-provider.xml", "classpath:remote-provider.xml"};
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(configLocations, true);
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:remote-provider.xml");
         // 允许覆盖
         context.setAllowBeanDefinitionOverriding(true);
         // 允许循环引用，并自动解决

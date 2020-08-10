@@ -8,15 +8,15 @@ import org.springframework.stereotype.Service;
  * @Author LiquorSea
  * @Date 2019/9/28 16:03
  **/
+@Service
+public class IndexServiceC {
 
-public class IndexService {
-//    @Autowired
+    @Autowired
     private  IndexDao dao;
     public void service(){
-        dao.test();
-    }
-    public void setDao(IndexDao dao) {
-        this.dao = dao;
+
+        System.out.println(this.getClass().getSimpleName() + ":" + dao.query());
+
     }
 }
   
